@@ -46,6 +46,7 @@ function verificarChute() {
     }
 }
 
+
 function gerarNumeroAleatorio() {
     let numeroEscolhido =  parseInt(Math.random() * numeroLimiteMaximo + 1);
 
@@ -67,13 +68,16 @@ function limparCampo() {
     chute.focus();
 }
 
+
 function reiniciarJogo() {
     numeroSecreto = gerarNumeroAleatorio();
     tentativas = 1;
+    numerosSorteados = [];
     document.querySelector('input').style.background = '#fff';
     document.querySelector('input').style.textAlign = 'left';
     exibirTextoNaTela('h1', 'Jogo do Número Secreto', speak);
     exibirTextoNaTela('p', `Escolha um número entre 1 e ${numeroLimiteMaximo}`, speak);
+    exibirTextoNaTela('#chutes', '', !speak);
     document.querySelector('#chutar').removeAttribute('disabled');
     document.querySelector('#reiniciar').setAttribute('disabled', true);
     limparCampo();
