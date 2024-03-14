@@ -1,5 +1,5 @@
 let numerosSorteados = [];
-let numeroLimiteMaximo = 1000;
+let numeroLimiteMaximo = 100;
 let numeroSecreto;
 let tentativas;
 let speak = true;
